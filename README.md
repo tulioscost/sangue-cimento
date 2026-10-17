@@ -1,3 +1,13 @@
+# Sangue & Cimento v0.2.0
+
+Sistema para Foundry VTT 14.369.
+
+## Destaques
+- Ficha redesenhada em estilo relatório policial + grimório, com sangue e projéteis decorativos.
+- Integração obrigatória com Dice So Nice.
+- Áudio disparado ao obter face 1 e brilho dourado ao obter face 6.
+- Compêndios de itens, famílias prontas, antigos e dons agrupados por tipo.
+
 # SANGUE & CIMENTO — Foundry VTT 14.369
 **Versão do sistema:** `0.1.0` (primeira implementação técnica)  
 **Regras de origem:** *Sangue & Cimento* — Livro Básico, edição 2.1 consolidada  

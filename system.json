@@ -3,7 +3,7 @@
   "type": "system",
   "title": "Sangue & Cimento — Máfia e Horror Cósmico",
   "description": "Sistema de RPG de Túlio Costa para Foundry VTT 14.369; ficha dossier/grimório, famílias, antigos, dons, projetos rituais e dados dourados dependentes do Dice So Nice.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
     {
       "name": "Túlio Costa"
@@ -64,8 +64,80 @@
   "license": "LICENSE.md",
   "url": "https://github.com/tulioscost/sangue-cimento",
   "manifest": "https://github.com/tulioscost/sangue-cimento/releases/latest/download/system.json",
-  "download": "https://github.com/tulioscost/sangue-cimento/releases/download/v0.1.0/sangue-cimento.zip",
+  "download": "https://github.com/tulioscost/sangue-cimento/releases/download/v0.2.0/sangue-cimento.zip",
   "readme": "README.md",
   "bugs": "https://github.com/tulioscost/sangue-cimento/issues",
-  "changelog": "https://github.com/tulioscost/sangue-cimento/releases"
+  "changelog": "https://github.com/tulioscost/sangue-cimento/releases",
+  "packs": [
+    {
+      "name": "itens-armas",
+      "label": "Itens · Armas",
+      "type": "Item",
+      "path": "packs/itens-armas.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "itens-protecao",
+      "label": "Itens · Proteção",
+      "type": "Item",
+      "path": "packs/itens-protecao.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "itens-equipamentos",
+      "label": "Itens · Equipamentos",
+      "type": "Item",
+      "path": "packs/itens-equipamentos.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "familias-prontas",
+      "label": "Famílias Prontas",
+      "type": "Actor",
+      "path": "packs/familias-prontas.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "antigos",
+      "label": "Antigos",
+      "type": "Actor",
+      "path": "packs/antigos.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "dons-percepcao",
+      "label": "Dons · Percepção",
+      "type": "Item",
+      "path": "packs/dons-percepcao.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "dons-controle",
+      "label": "Dons · Controle",
+      "type": "Item",
+      "path": "packs/dons-controle.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "dons-influencia",
+      "label": "Dons · Influência",
+      "type": "Item",
+      "path": "packs/dons-influencia.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "dons-protecao",
+      "label": "Dons · Proteção",
+      "type": "Item",
+      "path": "packs/dons-protecao.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "dons-mobilidade",
+      "label": "Dons · Mobilidade",
+      "type": "Item",
+      "path": "packs/dons-mobilidade.db",
+      "system": "sangue-cimento"
+    }
+  ]
 }

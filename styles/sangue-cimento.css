@@ -1,53 +1,61 @@
-/* Sangue & Cimento · policia + grimório · Foundry VTT 14 */
-.sangue-cimento{--sc-ink:#24211e;--sc-paper:#e4d7ba;--sc-edge:#9c8467;--sc-red:#752e2c;--sc-gold:#ad863f;--sc-shade:#b1a38b;--sc-black:#151719;font-family:Georgia,'Times New Roman',serif;}
-.sangue-cimento .window-content{padding:0;overflow:auto;background:#272324;color:var(--sc-ink)}
-.sangue-cimento .sc-root{background:linear-gradient(93deg,rgba(78,47,22,.09),transparent 18%,rgba(45,26,15,.1)),radial-gradient(circle at 85% 7%,rgba(133,24,24,.1),transparent 26%),repeating-linear-gradient(0deg,transparent,transparent 25px,rgba(79,51,37,.028) 26px),#e5d7b9;color:var(--sc-ink);padding:18px 22px 12px;min-height:100%;box-shadow:inset 0 0 55px #4b362d45;position:relative;border:9px double #1d1c1b}
-.sangue-cimento .sc-root:before{content:'✦';position:absolute;top:5px;right:7px;color:#8c332b65;font-size:24px}
-.sangue-cimento .sc-filehead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;border-bottom:4px double var(--sc-red);padding:4px 0 14px;margin-bottom:15px}
-.sangue-cimento .sc-filehead h1{font-family:'Gothica',Georgia,serif;font-weight:800;font-size:29px;line-height:1.03;letter-spacing:.1em;color:#2c2420;margin:5px 0 6px;text-transform:uppercase;text-shadow:0 1px #ffffff70}
+/* Sangue & Cimento · polícia + grimório · Foundry VTT 14 */
+.sangue-cimento{--sc-ink:#241d18;--sc-paper:#e6d9bc;--sc-paper-2:#d8c8a9;--sc-edge:#8a6d53;--sc-red:#702622;--sc-gold:#b48a46;--sc-dark:#181414;--sc-dark-2:#241c1b;font-family:Georgia,'Times New Roman',serif;}
+.sangue-cimento .window-content{padding:0;overflow:auto;background:#141313;color:var(--sc-ink)}
+.sangue-cimento .sc-root{background:linear-gradient(180deg,#e4d7b8 0 34%, #2b2322 34%, #171414 100%);color:var(--sc-ink);padding:18px 20px 14px;min-height:100%;box-shadow:inset 0 0 75px rgba(0,0,0,.35);position:relative;border:8px double #211c1b;overflow:hidden}
+.sangue-cimento .sc-root:before,.sangue-cimento .sc-root:after{content:'';position:absolute;pointer-events:none;z-index:0}
+.sangue-cimento .sc-root:before{inset:-10% auto auto -8%;width:220px;height:220px;background:radial-gradient(circle at 35% 35%, rgba(120,8,8,.28), transparent 45%),radial-gradient(circle at 55% 55%, rgba(70,8,8,.20), transparent 52%),radial-gradient(circle at 70% 45%, rgba(160,25,17,.15), transparent 32%);filter:blur(2px);transform:rotate(-18deg)}
+.sangue-cimento .sc-root:after{right:18px;bottom:120px;width:150px;height:150px;background:radial-gradient(circle at 20px 20px,#1f1a19 0 5px,#87735f 6px 8px,transparent 9px),radial-gradient(circle at 90px 30px,#1f1a19 0 6px,#87735f 7px 9px,transparent 10px),radial-gradient(circle at 45px 95px,#1f1a19 0 5px,#87735f 6px 8px,transparent 9px);opacity:.55}
+.sangue-cimento .sc-root > *{position:relative;z-index:1}
+.sangue-cimento .sc-filehead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;border-bottom:3px solid #91654f;padding:2px 0 12px;margin-bottom:15px}
+.sangue-cimento .sc-filehead h1{font-family:'Gothica',Georgia,serif;font-weight:800;font-size:30px;line-height:1.02;letter-spacing:.11em;color:#2d211c;margin:5px 0 6px;text-transform:uppercase;text-shadow:0 1px #ffffff70}
 .sangue-cimento .sc-filehead h1 i{color:var(--sc-red);font-style:normal}
-.sangue-cimento .sc-filehead p{margin:0;font-style:italic;font-size:12px;color:#645747}
-.sangue-cimento .sc-kicker{font-size:9px;font-weight:700;letter-spacing:.15em;color:var(--sc-red)}
-.sangue-cimento .sc-stamp{border:4px double #8b3734;color:#8b3734;transform:rotate(-8deg);padding:9px;font-size:13px;letter-spacing:.14em;opacity:.82;font-weight:bold;text-align:center;min-width:104px}
+.sangue-cimento .sc-filehead p{margin:0;font-style:italic;font-size:12px;color:#69594a}
+.sangue-cimento .sc-kicker{font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--sc-red)}
+.sangue-cimento .sc-stamp{border:4px double #8b3734;color:#8b3734;transform:rotate(-7deg);padding:9px;font-size:13px;letter-spacing:.14em;opacity:.82;font-weight:bold;text-align:center;min-width:104px;background:#efe4cb76}
 .sangue-cimento .sc-stamp small{font-size:9px}
 .sangue-cimento .sc-identification{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px;position:relative}
-.sangue-cimento .sc-portrait{width:132px;min-width:132px;height:176px;display:flex;flex-direction:column;align-items:stretch;background:#d3c5a9;border:3px solid #594d41;padding:5px;cursor:pointer;box-shadow:3px 4px 0 #7266575e;color:var(--sc-ink)}
-.sangue-cimento .sc-portrait img{width:100%;height:140px;object-fit:cover;filter:grayscale(.7) sepia(.35) contrast(1.1)}
+.sangue-cimento .sc-portrait{width:132px;min-width:132px;height:176px;display:flex;flex-direction:column;align-items:stretch;background:#d0c0a4;border:3px solid #57493e;padding:5px;cursor:pointer;box-shadow:3px 4px 0 #5f53465e;color:var(--sc-ink)}
+.sangue-cimento .sc-portrait img{width:100%;height:140px;object-fit:cover;filter:grayscale(.65) sepia(.30) contrast(1.1)}
 .sangue-cimento .sc-portrait span{font-size:8px;font-weight:bold;letter-spacing:.08em;padding-top:4px}
 .sangue-cimento .sc-id-fields{flex:1;display:grid;gap:6px}
-.sangue-cimento .sc-seal{border:3px double #8e2a2a;border-radius:50%;color:#7d2929;width:76px;min-width:76px;height:76px;display:grid;place-content:center;text-align:center;transform:rotate(12deg);font-size:21px;font-weight:bold;opacity:.65}
+.sangue-cimento .sc-seal{border:3px double #8e2a2a;border-radius:50%;color:#7d2929;width:76px;min-width:76px;height:76px;display:grid;place-content:center;text-align:center;transform:rotate(12deg);font-size:21px;font-weight:bold;opacity:.65;background:#eadcc55a}
 .sangue-cimento .sc-seal small{font-size:9px;letter-spacing:.12em}
 .sangue-cimento label{display:flex;flex-direction:column;font-size:10px;font-weight:700;letter-spacing:.05em;color:#5b4139;gap:3px}
-.sangue-cimento input,.sangue-cimento textarea,.sangue-cimento select{color:#262323!important;background:#f5ecdaab!important;border:0!important;border-bottom:1px solid #84644f!important;border-radius:0!important;box-shadow:none!important;min-height:28px;font:normal 13px Georgia,serif!important;letter-spacing:0!important;width:100%;}
-.sangue-cimento textarea{border:1px solid #9c876b!important;min-height:64px;padding:8px;resize:vertical;}
-.sangue-cimento input:focus,.sangue-cimento textarea:focus{outline:2px solid #ab8a50!important;}
+.sangue-cimento input,.sangue-cimento textarea,.sangue-cimento select{color:#262323!important;background:#f4ead8df!important;border:1px solid #9d866a!important;border-bottom:1px solid #775b46!important;border-radius:2px!important;box-shadow:none!important;min-height:28px;font:normal 13px Georgia,serif!important;letter-spacing:0!important;width:100%;}
+.sangue-cimento textarea{min-height:64px;padding:8px;resize:vertical;line-height:1.35}
+.sangue-cimento input:focus,.sangue-cimento textarea:focus{outline:2px solid #ab8a50!important}
 .sangue-cimento input[type=number]{text-align:center}
 .sangue-cimento .sc-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .sangue-cimento .sc-tracks{display:flex;flex-wrap:wrap;gap:6px;align-items:center;border-block:1px solid #aa9c86;padding:8px 0;margin-bottom:12px}
 .sangue-cimento .sc-track{display:flex;align-items:center;justify-content:center;gap:6px;background:#e7dbc9;border:1px solid #a6977f;padding:4px 7px;font-size:10px;text-transform:uppercase;letter-spacing:.04em}
 .sangue-cimento .sc-track strong{font-size:13px;color:var(--sc-red)}
 .sangue-cimento .sc-track input{width:35px;height:22px;min-height:22px}
-.sangue-cimento button:not(.sc-portrait){border:1px solid #8b755e;background:linear-gradient(#d9c6a1,#b6a27e);color:#352421;font:bold 10px Georgia,serif;letter-spacing:.03em;box-shadow:0 2px 0 #89796065;min-height:24px;padding:4px 9px;cursor:pointer;transition:background .15s ease}
+.sangue-cimento button:not(.sc-portrait){border:1px solid #8b755e;background:linear-gradient(#e4d1ac,#bba47e);color:#2b1d19;font:bold 11px Georgia,serif;letter-spacing:.03em;box-shadow:0 2px 0 #89796065;min-height:26px;padding:4px 10px;cursor:pointer;transition:background .15s ease}
 .sangue-cimento button:not(.sc-portrait):hover{background:#f1d8a7;color:#5d221e}
 .sangue-cimento .sc-tab-bar{display:flex;gap:3px;border-bottom:3px double #54372b;flex-wrap:wrap}
-.sangue-cimento .sc-tab-bar button{flex:1;min-width:96px;white-space:nowrap;}
+.sangue-cimento .sc-tab-bar button{flex:1;min-width:96px;white-space:nowrap}
 .sangue-cimento .sc-tab-bar button.is-active{background:#612c2c;color:#f6e6c0;border-color:#442020}
 .sangue-cimento .sc-control-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:#ccbea39e;padding:6px 10px;margin-top:9px;border:1px dashed #82725d}
 .sangue-cimento .sc-control-strip label{flex-direction:row;align-items:center;gap:7px;min-width:125px}
 .sangue-cimento .sc-control-strip input{max-width:56px;min-height:24px}
 .sangue-cimento .sc-control-strip small{color:#6d544b}
-.sangue-cimento .sc-paper-content{margin-top:12px;min-height:330px;padding:6px 2px 12px;}
+.sangue-cimento .sc-paper-content{margin-top:12px;min-height:360px;padding:6px 2px 12px}
 .sangue-cimento .sc-pane{display:none}
 .sangue-cimento .sc-pane.is-active{display:block}
-.sangue-cimento h2{font-size:15px;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px double #947a63;padding-bottom:5px;margin:14px 0 10px;color:#632b2b}
+.sangue-cimento h2{font-size:15px;letter-spacing:.14em;text-transform:uppercase;border-bottom:2px double #947a63;padding-bottom:5px;margin:14px 0 10px;color:#632b2b}
+.sangue-cimento .sc-pane-skills h2{color:#f1dcc3;border-bottom-color:#8b6b5a}
 .sangue-cimento .sc-attributes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
 .sangue-cimento .sc-attribute{display:flex;align-items:center;gap:4px;padding:6px;border:1px solid #b9a58a;background:#f8f0e078}
 .sangue-cimento .sc-attribute label{min-width:65px;flex:1}
 .sangue-cimento .sc-attribute input{width:42px;flex:0 0 42px}
-.sangue-cimento .sc-skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 12px}
-.sangue-cimento .sc-skill{display:flex;align-items:center;gap:5px;border-bottom:1px dotted #877967;padding:3px 0}
-.sangue-cimento .sc-skill span{flex:1;font-size:12px}
-.sangue-cimento .sc-skill input{width:37px;max-width:37px;min-height:21px}
+.sangue-cimento .sc-pane-skills{background:linear-gradient(180deg,#271e1e,#191515);border:1px solid #6d5046;padding:10px 12px 14px;box-shadow:inset 0 0 35px rgba(0,0,0,.35)}
+.sangue-cimento .sc-skills-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 14px;max-height:420px;overflow:auto;padding-right:4px}
+.sangue-cimento .sc-skill-group{background:rgba(241,231,212,.05);border:1px solid rgba(184,145,125,.35);padding:8px}
+.sangue-cimento .sc-skill-group header{font:700 12px Georgia,serif;letter-spacing:.12em;text-transform:uppercase;color:#f1dcc3;padding-bottom:8px;margin-bottom:8px;border-bottom:1px solid rgba(240,215,180,.22)}
+.sangue-cimento .sc-skills-list{display:grid;gap:6px}
+.sangue-cimento .sc-skill{display:grid;grid-template-columns:minmax(0,1fr) 42px 76px;align-items:center;gap:7px;background:linear-gradient(180deg,#e9dbc0,#d8c7a7);border:1px solid #81654e;padding:6px 8px;box-shadow:0 1px 0 rgba(255,255,255,.22)}
+.sangue-cimento .sc-skill span{font-size:13px;font-weight:700;color:#2b1b18;line-height:1.1}
+.sangue-cimento .sc-skill input{width:42px;max-width:42px;min-height:24px;background:#f7efde!important}
 .sangue-cimento .sc-toolbar{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}
 .sangue-cimento .sc-record{display:flex;justify-content:space-between;gap:9px;align-items:center;border:1px solid #b59b78;padding:9px;margin:5px 0;background:#fff7e44f}
 .sangue-cimento .sc-record div:first-child{flex:1}
@@ -61,9 +69,10 @@
 .sangue-cimento .sc-resource{display:flex;align-items:center;gap:10px;border-bottom:1px dotted #aa9174;padding:6px}
 .sangue-cimento .sc-resource label{flex:1}
 .sangue-cimento .sc-resource input{max-width:85px}
-.sangue-cimento .sc-footer{margin-top:20px;border-top:3px double #855b4b;padding-top:8px;text-align:center;color:#795446;font-weight:bold;letter-spacing:.14em;font-size:9px}
+.sangue-cimento .sc-footer{margin-top:20px;border-top:3px double #855b4b;padding-top:8px;text-align:center;color:#b99f82;font-weight:bold;letter-spacing:.14em;font-size:9px}
 .sc-golden-glow{position:fixed;inset:0;z-index:9999;pointer-events:none;background:radial-gradient(ellipse at 50% 46%,rgba(255,230,142,var(--sc-glow-intensity)),rgba(249,180,38,.21) 25%,transparent 67%);mix-blend-mode:screen;animation:sc-flare 1.35s ease-out forwards;}
 @keyframes sc-flare{0%{opacity:0;filter:brightness(2)}19%{opacity:1;filter:brightness(2.4)}58%{opacity:.6;filter:brightness(1.1)}100%{opacity:0;filter:brightness(1)}}
 .sc-roll-result{padding:9px 5px;display:flex;gap:5px;flex-direction:column;font:13px Georgia,serif;color:#d7ad65}
 .sc-roll-result strong{font-size:15px}.sc-roll-result span{color:#f3df9d}.sc-roll-result small{color:#b2a78e}
-@media (max-width:720px){.sangue-cimento .sc-two,.sangue-cimento .sc-attributes,.sangue-cimento .sc-skills,.sangue-cimento .sc-resources{grid-template-columns:1fr}.sangue-cimento .sc-identification{flex-wrap:wrap}.sangue-cimento .sc-seal{display:none}.sangue-cimento .sc-filehead h1{font-size:21px}}
+@media (max-width:900px){.sangue-cimento .sc-skills-groups{grid-template-columns:1fr;max-height:none}}
+@media (max-width:720px){.sangue-cimento .sc-two,.sangue-cimento .sc-attributes,.sangue-cimento .sc-resources{grid-template-columns:1fr}.sangue-cimento .sc-identification{flex-wrap:wrap}.sangue-cimento .sc-seal{display:none}.sangue-cimento .sc-filehead h1{font-size:21px}.sangue-cimento .sc-skill{grid-template-columns:minmax(0,1fr) 38px 74px}}

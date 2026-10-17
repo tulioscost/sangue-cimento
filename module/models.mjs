@@ -6,6 +6,12 @@ const track=(initial=0,max=10)=>schema({value:number(initial,0,max),max:number(m
 
 export const ATTRIBUTES={for:'Força',agi:'Agilidade',res:'Resistência',car:'Carisma',inti:'Intimidação',aut:'Autoridade',int:'Inteligência',per:'Percepção',von:'Vontade'};
 export const SKILLS={armasFogo:['Armas de Fogo','agi'],armasBrancas:['Armas Brancas','for'],atletismo:['Atletismo','agi'],briga:['Briga','for'],crime:['Crime','int'],conducao:['Condução','agi'],engenharia:['Engenharia','int'],furtividade:['Furtividade','agi'],informatica:['Informática / Técnica','int'],interrogatorio:['Interrogatório','inti'],investigacao:['Investigação','per'],lideranca:['Liderança','aut'],labia:['Lábia','car'],medicina:['Medicina','int'],negociacao:['Negociação','car'],ocultismo:['Ocultismo','von'],politica:['Política','int'],resistenciaMental:['Resistência Mental','von'],rua:['Rua','per'],sobrevivencia:['Sobrevivência','res']};
+export const SKILL_GROUPS=[
+  {key:'confronto',label:'Confronto e ação',skills:['armasFogo','armasBrancas','atletismo','briga','furtividade','conducao']},
+  {key:'submundo',label:'Submundo e pressão',skills:['crime','interrogatorio','lideranca','labia','negociacao','rua']},
+  {key:'investigacao',label:'Investigação e técnica',skills:['engenharia','informatica','investigacao','medicina','politica','sobrevivencia']},
+  {key:'oculto',label:'Oculto e resistência',skills:['ocultismo','resistenciaMental']}
+];
 export const RESOURCES={dinheiro:'Dinheiro',territorio:'Território',influencia:'Influência',violencia:'Violência',segredo:'Segredo'};
 const attrSchema=()=>schema(Object.fromEntries(Object.keys(ATTRIBUTES).map(k=>[k,schema({value:number(1,0,10)})])));
 const skillSchema=()=>schema(Object.fromEntries(Object.keys(SKILLS).map(k=>[k,schema({value:number(0,0,10)})])));

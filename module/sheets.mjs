@@ -1,4 +1,4 @@
-import {ATTRIBUTES,SKILLS,RESOURCES} from './models.mjs';
+import {ATTRIBUTES,SKILLS,SKILL_GROUPS,RESOURCES} from './models.mjs';
 import {rollD6} from './dice.mjs';
 const H=foundry.applications.api.HandlebarsApplicationMixin;
 const A=foundry.applications.sheets.ActorSheetV2;
@@ -53,6 +53,7 @@ export class CharacterSheet extends H(A){
  async _prepareContext(opts){const ctx=await super._prepareContext(opts);return {...ctx,actor:this.actor,system:this.actor.system,
    attributes:fieldsToEntries(this.actor.system.attributes,ATTRIBUTES),
    skills:Object.entries(SKILLS).map(([key,[label,attribute]])=>({key,label,attribute,value:this.actor.system.skills[key]?.value??0})),
+   skillGroups:SKILL_GROUPS.map(group=>({key:group.key,label:group.label,skills:group.skills.map(key=>({key,label:SKILLS[key]?.[0]||key,attribute:SKILLS[key]?.[1]||'int',value:this.actor.system.skills[key]?.value??0}))})),
    items:this.actor.items.contents.map(it=>({id:it.id,name:it.name,type:it.type,img:it.img,system:it.system,ritual:it.type==='ritual'})),
    doms:this.actor.items.filter(x=>x.type==='dom'),rituais:this.actor.items.filter(x=>x.type==='ritual'),
    arsenal:this.actor.items.filter(x=>['arma','armadura','equipamento'].includes(x.type)),
