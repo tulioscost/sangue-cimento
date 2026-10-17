@@ -1,0 +1,71 @@
+{
+  "id": "sangue-cimento",
+  "type": "system",
+  "title": "Sangue & Cimento — Máfia e Horror Cósmico",
+  "description": "Sistema de RPG de Túlio Costa para Foundry VTT 14.369; ficha dossier/grimório, famílias, antigos, dons, projetos rituais e dados dourados dependentes do Dice So Nice.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Túlio Costa"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.369",
+    "maximum": "14"
+  },
+  "esmodules": [
+    "module/main.mjs"
+  ],
+  "styles": [
+    "styles/sangue-cimento.css"
+  ],
+  "background": "systems/sangue-cimento/assets/illustrations/cover.png",
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "personagem": {},
+      "npc": {},
+      "familia": {},
+      "antigo": {}
+    },
+    "Item": {
+      "dom": {},
+      "ritual": {},
+      "arma": {},
+      "armadura": {},
+      "equipamento": {},
+      "favor": {},
+      "contato": {}
+    }
+  },
+  "primaryTokenAttribute": "resources.vitalidade",
+  "secondaryTokenAttribute": "resources.estresse",
+  "initiative": "1d6",
+  "grid": {
+    "distance": 1,
+    "units": "m"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "dice-so-nice",
+        "type": "module",
+        "reason": "Dado dourado d6, resultados especiais, brilho do 6 e áudio do 1 exigem Dice So Nice."
+      }
+    ]
+  },
+  "license": "LICENSE.md",
+  "url": "https://github.com/tulioscost/sangue-cimento",
+  "manifest": "https://github.com/tulioscost/sangue-cimento/releases/latest/download/system.json",
+  "download": "https://github.com/tulioscost/sangue-cimento/releases/download/v0.1.0/sangue-cimento.zip",
+  "readme": "README.md",
+  "bugs": "https://github.com/tulioscost/sangue-cimento/issues",
+  "changelog": "https://github.com/tulioscost/sangue-cimento/releases"
+}
