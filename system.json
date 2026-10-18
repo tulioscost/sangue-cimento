@@ -2,8 +2,8 @@
   "id": "sangue-cimento",
   "type": "system",
   "title": "Sangue & Cimento — Máfia e Horror Cósmico",
-  "description": "Sistema de RPG de Túlio Costa para Foundry VTT 14.369; ficha dossier/grimório, famílias, antigos, dons, projetos rituais e dados dourados dependentes do Dice So Nice.",
-  "version": "0.3.0",
+  "description": "Sangue & Cimento 2.1 de Túlio Costa: fichas responsivas, rolagens de chat em alto contraste, dependências Dice So Nice e Dice Tray, geradores de personagens e catálogos importáveis.",
+  "version": "0.3.1",
   "authors": [
     {
       "name": "Túlio Costa"
@@ -57,94 +57,20 @@
       {
         "id": "dice-so-nice",
         "type": "module",
-        "reason": "Dado dourado d6, resultados especiais, brilho do 6 e áudio do 1 exigem Dice So Nice."
+        "reason": "Dados personalizados com efeitos de 1 e 6."
+      },
+      {
+        "id": "dice-calculator",
+        "type": "module",
+        "reason": "Bandeja e calculadora de dados obrigatórias."
       }
     ]
   },
   "license": "LICENSE.md",
   "url": "https://github.com/tulioscost/sangue-cimento",
   "manifest": "https://github.com/tulioscost/sangue-cimento/releases/latest/download/system.json",
-  "download": "https://github.com/tulioscost/sangue-cimento/releases/download/v0.3.0/sangue-cimento.zip",
+  "download": "https://github.com/tulioscost/sangue-cimento/releases/download/v0.3.1/sangue-cimento.zip",
   "readme": "README.md",
   "bugs": "https://github.com/tulioscost/sangue-cimento/issues",
-  "changelog": "https://github.com/tulioscost/sangue-cimento/releases",
-  "packs": [
-    {
-      "name": "itens-armas",
-      "label": "Itens · Armas",
-      "type": "Item",
-      "path": "packs/itens-armas.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "itens-protecao",
-      "label": "Itens · Proteção",
-      "type": "Item",
-      "path": "packs/itens-protecao.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "itens-equipamentos",
-      "label": "Itens · Equipamentos",
-      "type": "Item",
-      "path": "packs/itens-equipamentos.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "familias-prontas",
-      "label": "Famílias Prontas",
-      "type": "Actor",
-      "path": "packs/familias-prontas.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "antigos",
-      "label": "Antigos",
-      "type": "Actor",
-      "path": "packs/antigos.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "dons-percepcao",
-      "label": "Dons · Percepção",
-      "type": "Item",
-      "path": "packs/dons-percepcao.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "dons-controle",
-      "label": "Dons · Controle",
-      "type": "Item",
-      "path": "packs/dons-controle.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "dons-influencia",
-      "label": "Dons · Influência",
-      "type": "Item",
-      "path": "packs/dons-influencia.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "dons-protecao",
-      "label": "Dons · Proteção",
-      "type": "Item",
-      "path": "packs/dons-protecao.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "dons-mobilidade",
-      "label": "Dons · Mobilidade",
-      "type": "Item",
-      "path": "packs/dons-mobilidade.db",
-      "system": "sangue-cimento"
-    },
-    {
-      "name": "trilhas-sonoras",
-      "label": "Trilhas Sonoras",
-      "type": "Playlist",
-      "path": "packs/trilhas-sonoras.db",
-      "system": "sangue-cimento"
-    }
-  ]
+  "changelog": "https://github.com/tulioscost/sangue-cimento/releases"
 }
