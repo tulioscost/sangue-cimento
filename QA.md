@@ -1,14 +1,19 @@
-# Roteiro de testes da v0.3.2 no Foundry
+# Testes — Sangue & Cimento v0.3.3
 
-1. Crie ou abra um mundo v14.369 com Dice So Nice e Dice Tray ativos.
-2. Abra um Personagem e redimensione a ficha para uma janela baixa; confirme barra vertical interna visível e acesso ao rodapé de todas as abas.
-3. Vá em Arsenal. Abra uma arma, marque **Exige teste** e **Pode ser equipado**. Escolha Atributo `AGI` e Perícia `Armas de Fogo`, bônus +1, quantidade 1.
-4. **EQUIPAR**, depois **ROLAR**. Selecione dificuldade 2 e modificador temporário +1. Verifique que a reserva é `AGI + Armas de Fogo +1 (item)+1 (temporário)`, limitada a 10d6.
-5. Na janela, mude Atributo para Inteligência, Perícia para Crime, marque **Salvar vínculos** e role novamente. Reabra o item e confirme a vinculação.
-6. Adicione duas armaduras com RD 2 e RD 3. Equipe ambas: a RD efetiva deve ser 3, nunca 5. Desequipe a de RD 3: a RD deve refletir o máximo entre RD base e a armadura de RD 2.
-7. Crie um consumível com quantidade 2, Vitalidade +3 e redução de Estresse 1. Clique **CONSUMIR** duas vezes. O estoque termina em 0; terceira tentativa não consome nem concede efeito.
-8. Teste a importação de um item do compêndio de versões anteriores. Confira as ações disponíveis após a migração da v0.3.2.
-9. Confirme dados 3D personalizados, brilho ao sair 6 e áudio ao sair 1.
-10. Teste as macros de Personagem e NPC: armas geradas devem ter ações de rolagem.
+## Verificações automatizadas concluídas
+- `node --check` em todos os módulos JavaScript.
+- `node tests/qa-world-setup.mjs`: verifica criação de cena, playlist, quatro pastas e pasta-mãe, rota de atores, não duplicação, preservação de uma cena ativa e permissão de GM.
+- `node tests/qa-equipment.mjs`: mantém a regressão de equipamentos, RD, consumíveis e rolagens.
+- Manifesto e integridade de ZIPs verificados após empacotamento.
 
-Se algo falhar, abra F12 → Console, copie o erro e informe a ação que o provocou.
+## Testes manuais necessários no Foundry 14.369
+1. Abra um mundo **novo**: o GM deve encontrar a cena `Bem-vindos a Véspera` na navegação, com arte completa.
+2. Ative a cena. Confirme que a playlist `Sangue & Cimento · Tema de Véspera` toca `The Price of Blood`. Navegadores podem exigir clique/interação para liberar áudio.
+3. Em um mundo **existente**, confira que nenhuma cena de campanha foi alterada/ativada.
+4. Na barra lateral de Atores, confira `Sangue & Cimento` com quatro subpastas.
+5. Crie cada tipo (Personagem, NPC, Família, Antigo). Confira a pasta automática.
+6. Reinicie: sem duplicações.
+7. Execute a macro `S&C · Preparar Véspera e Pastas` e confira que não duplica nada.
+8. Confirme compêndios, áudio do dado 1, brilho do dado 6, ficha de equipamentos e rolagens.
+
+**Atenção:** este pacote não foi executado em uma instância real do Foundry. Os itens acima continuam pendentes de validação operacional em V14.369.

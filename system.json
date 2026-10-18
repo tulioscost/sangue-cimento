@@ -2,8 +2,8 @@
   "id": "sangue-cimento",
   "type": "system",
   "title": "Sangue & Cimento — Máfia e Horror Cósmico",
-  "description": "Sangue & Cimento: itens equipáveis, consumíveis e testáveis; RD automática, ficha com rolagem interna; Dice So Nice e Dice Tray obrigatórios; 173 entradas iniciais.",
-  "version": "0.3.2",
+  "description": "Sistema para Foundry VTT 14.369 com cena Bem-vindos a Véspera, música por cena, pastas automáticas por tipo de ator, ficha com textura de papel-jornal, sangue dinâmico, sujeira por corrupção, ativação de dons, munição em armas de fogo e compêndios ampliados.",
+  "version": "0.3.4",
   "authors": [
     {
       "name": "Túlio Costa"
@@ -69,7 +69,7 @@
   "license": "LICENSE.md",
   "url": "https://github.com/tulioscost/sangue-cimento",
   "manifest": "https://github.com/tulioscost/sangue-cimento/releases/latest/download/system.json",
-  "download": "https://github.com/tulioscost/sangue-cimento/releases/download/v0.3.2/sangue-cimento.zip",
+  "download": "https://github.com/tulioscost/sangue-cimento/releases/download/v0.3.4/sangue-cimento.zip",
   "readme": "README.md",
   "bugs": "https://github.com/tulioscost/sangue-cimento/issues",
   "changelog": "https://github.com/tulioscost/sangue-cimento/releases"
