@@ -12,3 +12,7 @@ Sistema para Foundry VTT 14.369 com foco em máfia + horror cósmico.
 - som ao trocar abas;
 - armas de fogo com munição e recarga;
 - compêndios expandidos e reorganizados.
+
+
+## Atualização 0.3.5
+Esta versão adiciona ícones próprios já vinculados aos compêndios de armas de fogo, armas brancas, munições e equipamentos.
