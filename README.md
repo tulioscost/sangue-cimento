@@ -16,3 +16,7 @@ Sistema para Foundry VTT 14.369 com foco em máfia + horror cósmico.
 
 ## Atualização 0.3.5
 Esta versão adiciona ícones próprios já vinculados aos compêndios de armas de fogo, armas brancas, munições e equipamentos.
+
+
+## Correção 0.3.6
+A macro **S&C · Instalar catálogos** agora sincroniza compêndios existentes, atualizando ícones e dados sem exigir a exclusão manual das coleções.

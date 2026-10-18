@@ -3,7 +3,7 @@
   "type": "system",
   "title": "Sangue & Cimento — Máfia e Horror Cósmico",
   "description": "Sistema para Foundry VTT 14.369 com cena Bem-vindos a Véspera, música por cena, pastas automáticas por tipo de ator, ficha com textura de papel-jornal, sangue dinâmico, sujeira por corrupção, ativação de dons, munição em armas de fogo e compêndios ampliados.",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "authors": [
     {
       "name": "Túlio Costa"
