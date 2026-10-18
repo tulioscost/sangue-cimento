@@ -3,7 +3,7 @@
   "type": "system",
   "title": "Sangue & Cimento — Máfia e Horror Cósmico",
   "description": "Sistema de RPG de Túlio Costa para Foundry VTT 14.369; ficha dossier/grimório, famílias, antigos, dons, projetos rituais e dados dourados dependentes do Dice So Nice.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "authors": [
     {
       "name": "Túlio Costa"
@@ -64,7 +64,7 @@
   "license": "LICENSE.md",
   "url": "https://github.com/tulioscost/sangue-cimento",
   "manifest": "https://github.com/tulioscost/sangue-cimento/releases/latest/download/system.json",
-  "download": "https://github.com/tulioscost/sangue-cimento/releases/download/v0.2.0/sangue-cimento.zip",
+  "download": "https://github.com/tulioscost/sangue-cimento/releases/download/v0.3.0/sangue-cimento.zip",
   "readme": "README.md",
   "bugs": "https://github.com/tulioscost/sangue-cimento/issues",
   "changelog": "https://github.com/tulioscost/sangue-cimento/releases",
@@ -137,6 +137,13 @@
       "label": "Dons · Mobilidade",
       "type": "Item",
       "path": "packs/dons-mobilidade.db",
+      "system": "sangue-cimento"
+    },
+    {
+      "name": "trilhas-sonoras",
+      "label": "Trilhas Sonoras",
+      "type": "Playlist",
+      "path": "packs/trilhas-sonoras.db",
       "system": "sangue-cimento"
     }
   ]
