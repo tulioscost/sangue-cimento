@@ -1,24 +1,44 @@
-# Sangue & Cimento v0.3.1
+# Sangue & Cimento — Sistema para Foundry VTT 14.369
 
-**Autor: Túlio Costa.** Sistema de RPG mafioso e horror cósmico para **Foundry VTT 14.369**.
+**Autor:** Túlio Costa · **Versão:** 0.3.2 · **ID:** `sangue-cimento`
 
-## Dependências obrigatórias
-- Dice So Nice (`dice-so-nice`)
-- Dice Tray / Dice Calculator (`dice-calculator`)
+RPG de máfia, horror cósmico e Contratos Ancestrais. Sistema baseado na edição 2.1 do livro básico.
 
-## Instalação GitHub
-Crie uma Release `v0.3.1` com `system.json` e `sangue-cimento.zip` como arquivos de download.
-O manifesto de instalação é:
+## Requisitos
+- Foundry VTT **v14.369**.
+- **Dice So Nice** — dependência obrigatória.
+- **Dice Tray / Dice Calculator** (`dice-calculator`) — dependência obrigatória.
+
+## Instalação por manifesto
+Depois que a release do repositório `tulioscost/sangue-cimento` estiver publicada:
+
 `https://github.com/tulioscost/sangue-cimento/releases/latest/download/system.json`
 
-## Esta versão
-- Ficha adaptativa: abas fluidas, perícias com ROLAR, diálogo de dificuldade e bônus temporários.
-- Chat com dados visíveis e resultados em alto contraste.
-- 40 Famílias de nomes exclusivos; 40 Antigos; 50 Dons; 42 itens; 1 playlist.
-- Três macros instaladas automaticamente no mundo do mestre: gerador de NPC, gerador de personagem e instalador de catálogos.
+Abra **Game Systems → Install System**, cole o link em **Manifest URL** e instale. Crie um mundo com Sangue & Cimento e ative as dependências.
 
-## Importante: compêndios no Foundry 14
-Em vez dos arquivos `.db` legados, o sistema inclui dados JSON em `data/seeds`. A primeira abertura por um mestre cria e popula compêndios do **mundo** no formato LevelDB usado nativamente pelo Foundry 14. A importação preserva catálogos anteriormente preenchidos. Para repetir o procedimento use a macro **S&C · Instalar catálogos**.
+## Inventário v0.3.2
+Na aba **Arsenal**, cada item exibe automaticamente ações aplicáveis conforme os campos de sua ficha:
 
-## Teste sugerido
-Após atualizar, reinicie o Foundry, ative os dois módulos, abra a ficha e redimensione a janela. ROLAR abre o diálogo; o chat deve exibir valores legíveis. Confira também as macros e os compêndios.
+- **ROLAR:** somente se `Exige teste` estiver marcado.
+- **EQUIPAR / DESEQUIPAR:** somente se `Pode ser equipado` estiver marcado; requer quantidade maior que zero.
+- **CONSUMIR:** somente se `Consumível` estiver marcado e houver estoque.
+
+Na ficha de item, defina **Atributo vinculado**, **Perícia vinculada**, **Bônus do equipamento**, **Quantidade**, **Dano**, **RD**, **Carga**, **Durabilidade** e as opções de uso. Para rolar, o jogador poderá escolher outros vínculos e marcar **Salvar Atributo e Perícia**.
+
+**Cálculo:** Atributo + Perícia + Bônus do item + Modificador temporário. O total respeita o teto geral de 10d6. Se o item é equipável, deve ser equipado antes do teste.
+
+**RD:** é o maior valor entre **RD base** e a RD de um equipamento ativo; ela nunca é somada entre diversas armaduras. A antiga RD preenchida manualmente é preservada como RD base na primeira atualização.
+
+**Consumo:** quantidade diminui em 1. O item permanece no inventário com quantidade zero, permitindo reabastecimento. Valores de cura ou redução de Estresse são opcionais e limitados aos respectivos máximos/mínimos.
+
+## Atualização da versão anterior
+Substitua a Release e atualize o sistema pelo Foundry. A versão 0.3.2 migra os registros antigos presentes em fichas e nos compêndios de itens criados por Sangue & Cimento, sem substituir valores como dano, RD, bônus ou descrições.
+
+## Interface
+A ficha possui barra de rolagem própria, colorida e sempre visível. A rolagem vertical continua até o rodapé mesmo em janelas pequenas. A posição de rolagem é preservada ao salvar campos; ao trocar de aba, começa no topo da nova seção.
+
+## Macro e catálogos
+As macros de NPC completo, Personagem completo e Instalação de Catálogos continuam disponíveis. O sistema mantém os conjuntos de Itens, Famílias, Antigos, Dons e a música tema.
+
+## Estado de testes
+A sintaxe, os manifestos e os cálculos puros foram testados. A prova final de funcionamento visual no Foundry 14.369 ainda deve ser feita em uma instalação real; veja `QA.md`.

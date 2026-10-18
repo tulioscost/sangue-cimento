@@ -1,18 +1,28 @@
-# Sangue & Cimento — v0.3.1
+# Sangue & Cimento — Foundry VTT v0.3.2
 
-Sistema de Túlio Costa — Foundry VTT 14.369
+**Autor:** Túlio Costa · **Foundry:** v14.369 · **Dependências obrigatórias:** Dice So Nice e Dice Tray (`dice-calculator`).
 
-## Correções
-- **Chat:** rolagens com contraste elevado, fontes maiores, quatro métricas em duas colunas e dados de 34 px. Estilo compatível com temas escuros e claros.
-- **Perícias:** botão TESTAR renomeado para **ROLAR**.
-- **Rolagens:** agora abrem janela solicitando dificuldade e modificadores temporários; cancelar não rola dados. Ações de Família também exibem competência e preparação.
-- **Ficha:** responsividade por largura da própria janela (`@container`) e preservação da aba ativa ao editar campos.
-- **Dependências:** `dice-calculator` (Dice Tray) somado ao `dice-so-nice`, ambos obrigatórios.
-- **Famílias:** 40 nomes exclusivos e coerentes com o cenário. Sem numeração romana automática.
-- **Macros:** dois geradores completos para NPC e Personagem, incluídos no Diretório de Macros do mundo. Uma terceira macro reinstala os catálogos.
+## Inventário funcional
+- Itens podem ter três funções independentes: **exigir teste**, **equipável** e **consumível**.
+- Botão **ROLAR** em itens com teste; a janela permite selecionar Atributo, Perícia, Dificuldade e modificador temporário, além de salvar o vínculo de Atributo e Perícia para uso futuro.
+- Fórmula: **Atributo + Perícia + Bônus do equipamento + modificador temporário**, limitada a **10d6**.
+- Botão **EQUIPAR/DESEQUIPAR**; o sistema atualiza a **RD efetiva** automaticamente. A RD é o maior valor entre RD base e peças equipadas — armaduras não se acumulam.
+- Botão **CONSUMIR**, decrementando a quantidade; itens esgotados ficam visíveis com quantidade zero. Itens configurados podem restaurar Vitalidade ou reduzir Estresse.
+- Campos de configuração adicionados à ficha individual do item.
 
-## Migração dos compêndios — importante
-Os antigos `.db` não são packs válidos no Foundry 14 (usa LevelDB). Os dados originais, agora JSON, são importados **pelo próprio Foundry** automaticamente na primeira abertura do mundo por um mestre, criando 11 compêndios locais `S&C · ...` (formato LevelDB do Foundry). A importação pode ser repetida pela macro **S&C · Instalar catálogos**. Catálogos já preenchidos não são sobrescritos. A partir desta versão, não é necessário converter manualmente arquivos `.db` nem usar aplicativos externos para isso.
+## Ficha e rolagem
+- Barra de rolagem **interna, vertical e sempre visível** em fichas de personagem, NPC, Família, Antigo e Item, com suporte a janelas menores.
+- Preservação da aba ativa e da posição do scroll entre atualizações.
+- Layout do inventário com botões de ação e indicadores de quantidade/equipado.
 
-## Limitação de testes
-Scripts e conteúdo verificados fora do aplicativo. A inicialização gráfica depende de validação na instalação local do Foundry 14.369.
+## Compatibilidade
+- Migração não destrutiva de itens da v0.3.1, preenchendo propriedades novas.
+- Famílias, Antigos, Dons, playlist e macros já existentes são preservados.
+- Geradores de personagem/NPC passam a criar inventário com vínculos de rolagem.
+
+## Testes executados
+- Checagem de sintaxe dos módulos JavaScript.
+- Conferência dos JSONs e ZIPs, incluindo manifesto.
+- Testes lógicos de equipar, desequipar, cálculo de RD, consumo, Vitalidade, Estresse e fórmula de rolagem.
+
+**Atenção:** não foi possível executar o Foundry VTT 14.369 aqui. O comportamento visual da rolagem interna, os diálogos e a integração com a API do aplicativo exigem validação no mundo do usuário.
